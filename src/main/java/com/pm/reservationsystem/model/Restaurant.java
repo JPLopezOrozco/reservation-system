@@ -29,8 +29,10 @@ public class Restaurant {
     @OneToOne(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private Policy policy;
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    @Builder.Default
     private Set<Table> tables = new HashSet<>();
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    @Builder.Default
     private Set<Reservation> reservations = new HashSet<>();
     @CreationTimestamp
     private Instant createdAt;

@@ -31,6 +31,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @Builder.Default
     private Set<Reservation> reservationsHistory = new HashSet<>();
 
 }

@@ -37,7 +37,6 @@ public class Reservation {
     @Enumerated(EnumType.STRING)
     private ReservationStatus status;
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(nullable = false)
     private User user;
     @Column(length = 250)
     private String specialNotes;

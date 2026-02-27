@@ -9,12 +9,4 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RestaurantService {
 
-
-    public RestaurantResponseDto createRestaurant(RestaurantRequestDto restaurant) {
-
-
-
-
-    }
-
 }

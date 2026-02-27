@@ -21,5 +21,6 @@ public class Policy {
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
     @OneToMany(mappedBy = "policy", fetch = FetchType.LAZY,cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private Set<Schedules> schedules = new HashSet<>();
 }
