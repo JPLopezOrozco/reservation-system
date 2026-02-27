@@ -1,4 +1,4 @@
-# Reservation System
+# reservation-system
 
 Reservation System is a production-oriented backend reservation engine built with Java 25 and Spring Boot.
 
@@ -43,3 +43,4 @@ docker run --name reservation-postgres \
   -e POSTGRES_PASSWORD=reservar \
   -p 5433:5432 \
   -d postgres:16
+=======
