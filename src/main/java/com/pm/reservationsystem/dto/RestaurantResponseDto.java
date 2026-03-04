@@ -2,10 +2,10 @@ package com.pm.reservationsystem.dto;
 
 import lombok.*;
 
+import java.time.Instant;
 import java.util.Set;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -13,5 +13,5 @@ public class RestaurantResponseDto {
     private Long id;
     private String name;
     private String address;
-    private Set<TableResponseDto> tables;
+    private Instant createdAt;
 }

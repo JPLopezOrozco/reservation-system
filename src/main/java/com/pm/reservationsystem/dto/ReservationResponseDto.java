@@ -1,5 +1,6 @@
 package com.pm.reservationsystem.dto;
 
+import com.pm.reservationsystem.model.ReservationStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,13 +13,13 @@ import java.time.Instant;
 @NoArgsConstructor
 @Builder
 public class ReservationResponseDto {
-    private String restaurantName;
-    private String tableName;
+    private Long restaurantId;
+    private Long tableId;
     private Instant startTime;
     private Instant expiryTime;
-    private int partySize;
-    private int durationMin;
-    private String status;
+    private Integer partySize;
+    private Integer durationMin;
+    private ReservationStatus status;
     private String specialNotes;
     private String userEmail;
 }

@@ -8,8 +8,10 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class TableResponseDto {
+    private Long id;
+    private Long restaurantId;
     private String tableName;
     private int minCapacity;
     private int maxCapacity;
-    private String tableGroup;
+    private Long tableGroupId;
 }

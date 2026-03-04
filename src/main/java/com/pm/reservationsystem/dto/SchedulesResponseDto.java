@@ -1,6 +1,5 @@
 package com.pm.reservationsystem.dto;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,14 +9,13 @@ import java.time.DayOfWeek;
 import java.time.LocalTime;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class SchedulesRequestDto {
-    @NotNull
+public class SchedulesResponseDto {
+    private Long id;
+    private Long policyId;
     private DayOfWeek dayOfWeek;
-    @NotNull
     private LocalTime startTime;
-    @NotNull
     private LocalTime endTime;
 }

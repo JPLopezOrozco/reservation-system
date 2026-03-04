@@ -1,15 +1,15 @@
 package com.pm.reservationsystem.dto;
 
-import jakarta.validation.constraints.NotNull;
+import com.pm.reservationsystem.model.Policy;
 import lombok.*;
 
 import java.util.Set;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class PolicyRequestDto {
-    @NotNull
+public class PolicyResponseDto {
+    private Long id;
     private Long restaurantId;
 }
