@@ -5,11 +5,14 @@ import com.pm.reservationsystem.dto.TableResponseDto;
 import com.pm.reservationsystem.model.Restaurant;
 import com.pm.reservationsystem.model.Table;
 import com.pm.reservationsystem.model.TableGroup;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TableMapper {
 
     public TableResponseDto toTableResponseDto(Table table) {
-        Long groupId = table.getTableGroup().getId() != null ? table.getTableGroup().getId() : null;
+        Long groupId = (table.getTableGroup() != null) ? table.getTableGroup().getId() : null;
+
         return TableResponseDto.builder()
                 .id(table.getId())
                 .restaurantId(table.getRestaurant().getId())

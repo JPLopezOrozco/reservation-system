@@ -4,7 +4,9 @@ import com.pm.reservationsystem.dto.SchedulesRequestDto;
 import com.pm.reservationsystem.dto.SchedulesResponseDto;
 import com.pm.reservationsystem.model.Policy;
 import com.pm.reservationsystem.model.Schedules;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ScheduleMapper {
 
     public Schedules toSchedules(SchedulesRequestDto schedulesRequestDto, Policy policy) {
@@ -16,7 +18,7 @@ public class ScheduleMapper {
                 .build();
     }
 
-    public SchedulesResponseDto toSchedulesRequestDto(Schedules schedules) {
+    public SchedulesResponseDto toSchedulesResponseDto(Schedules schedules) {
         return SchedulesResponseDto.builder()
                 .id(schedules.getId())
                 .policyId(schedules.getPolicy().getId())

@@ -18,6 +18,8 @@ public class TableGroup {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
+    private Long restaurantId;
     @Column(nullable = false, length = 50)
     private String name;
     @OneToMany(mappedBy = "tableGroup")

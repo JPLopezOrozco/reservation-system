@@ -1,0 +1,53 @@
+### Create reservation A (baseline)
+POST http://localhost:8080/reservations
+Content-Type: application/json
+
+{
+  "tableId": 1,
+  "partySize": 2,
+  "startTime": "2026-03-10T20:00:00Z",
+  "customerName": "Juan Lopez",
+  "customerEmail": "juan@test.com",
+  "customerPhone": "123456"
+}
+###
+
+### Create reservation B (OVERLAPPING)
+POST http://localhost:8080/reservations
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "tableId": 1,
+  "partySize": 2,
+  "startTime": "2026-03-10T21:00:00Z",
+  "customerName": "Pedro",
+  "customerEmail": "pedro@test.com",
+  "customerPhone": "222"
+}
+
+###
+
+### Create reservation C (NO overlap) - touches end
+POST http://localhost:8080/reservations
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "tableId": 1,
+  "partySize": 2,
+  "startTime": "2026-03-10T22:00:00Z",
+  "customerName": "Ana",
+  "customerEmail": "ana@test.com",
+  "customerPhone": "333"
+}
+
+###
+
+### Get reservation
+GET http://localhost:8080/reservations/1
+
+###
+
+### Delete reservation
+DELETE http://localhost:8080/reservations/1

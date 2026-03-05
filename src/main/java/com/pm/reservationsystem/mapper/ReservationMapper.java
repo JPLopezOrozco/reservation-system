@@ -6,14 +6,17 @@ import com.pm.reservationsystem.model.Reservation;
 import com.pm.reservationsystem.model.Restaurant;
 import com.pm.reservationsystem.model.Table;
 import com.pm.reservationsystem.model.User;
+import org.springframework.stereotype.Component;
 
 import java.time.Instant;
 
+@Component
 public class ReservationMapper {
 
-    public ReservationResponseDto toReservationDto(Reservation reservation) {
+    public ReservationResponseDto toReservationDto(Reservation reservation, Long restaurantId) {
         ReservationResponseDto reservationResponseDto = new ReservationResponseDto();
-        reservationResponseDto.setRestaurantId(reservation.getRestaurant().getId());
+        reservationResponseDto.setId(reservation.getId());
+        reservationResponseDto.setRestaurantId(restaurantId);
         reservationResponseDto.setTableId(reservation.getTable().getId());
         reservationResponseDto.setStartTime(reservation.getStartTime());
         reservationResponseDto.setExpiryTime(reservation.getExpiredAt());

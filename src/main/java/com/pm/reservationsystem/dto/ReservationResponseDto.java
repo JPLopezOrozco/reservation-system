@@ -13,6 +13,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @Builder
 public class ReservationResponseDto {
+    private Long id;
     private Long restaurantId;
     private Long tableId;
     private Instant startTime;

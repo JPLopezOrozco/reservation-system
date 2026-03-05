@@ -1,0 +1,50 @@
+### Create Table (no group)
+POST http://localhost:8080/table
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "tableName": "T1",
+  "minCapacity": 2,
+  "maxCapacity": 4
+}
+
+###
+
+### Create Table (with group)
+POST http://localhost:8080/table
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "tableName": "T2",
+  "minCapacity": 2,
+  "maxCapacity": 4,
+  "tableGroupId": 3
+}
+###
+POST http://localhost:8080/table
+Content-Type: application/json
+
+{
+"restaurantId": 4,
+"tableName": "T3",
+"minCapacity": 2,
+"maxCapacity": 4,
+"tableGroupId": 3
+}
+
+###
+
+### Get Tables By Restaurant
+GET http://localhost:8080/table/restaurant/4
+
+###
+
+### Get Tables By Restaurant And Group
+GET http://localhost:8080/table/restaurant/4/group?groupId=3
+
+###
+
+### Delete Table
+DELETE http://localhost:8080/table/5

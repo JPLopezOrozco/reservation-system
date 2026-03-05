@@ -1,0 +1,30 @@
+### Create Restaurant
+
+POST http://localhost:8080/restaurants
+Content-Type: application/json
+
+{
+"name": "Otro",
+"address": "Alguna dirección",
+"timezone": "America/Argentina/Buenos_Aires"
+}
+
+###
+
+### Get All Restaurants
+GET http://localhost:8080/restaurants
+
+###
+
+### Get Restaurant By Id
+GET http://localhost:8080/restaurants/id/3
+
+###
+
+### Get Restaurant By Name
+GET http://localhost:8080/restaurants/name?name=Otro
+
+###
+
+### Delete Restaurant
+DELETE http://localhost:8080/restaurants/3

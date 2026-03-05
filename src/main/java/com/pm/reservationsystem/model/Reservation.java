@@ -29,6 +29,8 @@ public class Reservation {
     @Column(nullable = false)
     private Instant startTime;
     @Column(nullable = false)
+    private Instant endTime;
+    @Column(nullable = false)
     private Instant expiredAt;
     @Column(nullable = false)
     private int partySize;

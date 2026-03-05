@@ -8,7 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -17,8 +16,6 @@ import java.time.LocalDateTime;
 public class ReservationRequestDto {
     @NotNull
     private Long tableId;
-    @NotNull
-    private Long restaurantId;
     @NotNull @Min(1)
     private Integer partySize;
     @NotNull

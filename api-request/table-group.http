@@ -1,0 +1,41 @@
+### Create Group - Ventana
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "name": "Ventana"
+}
+
+###
+
+### Create Group - Terraza
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "name": "Terraza"
+}
+
+###
+
+### Create Group - Barra
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "name": "Barra"
+}
+
+###
+
+### Create Group - Patio
+POST http://localhost:8080/groups
+Content-Type: application/json
+
+{
+  "restaurantId": 4,
+  "name": "Patio"
+}

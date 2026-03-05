@@ -4,10 +4,9 @@ import com.pm.reservationsystem.dto.RestaurantRequestDto;
 import com.pm.reservationsystem.dto.RestaurantResponseDto;
 import com.pm.reservationsystem.model.Policy;
 import com.pm.reservationsystem.model.Restaurant;
-import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
-
-@RequiredArgsConstructor
+@Component
 public class RestaurantMapper {
 
     public RestaurantResponseDto toRestaurantDto(Restaurant restaurant) {

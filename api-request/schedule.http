@@ -1,0 +1,31 @@
+### Create Schedule
+POST http://localhost:8080/schedule/policies/3/schedules
+Content-Type: application/json
+
+{
+  "dayOfWeek": "MONDAY",
+  "startTime": "12:00",
+  "endTime": "23:00"
+}
+
+###
+
+### Create Another Schedule
+POST http://localhost:8080/schedule/policies/3/schedules
+Content-Type: application/json
+
+{
+  "dayOfWeek": "TUESDAY",
+  "startTime": "12:00",
+  "endTime": "23:00"
+}
+
+###
+
+### Get All Schedules For Policy
+GET http://localhost:8080/schedule/policies/3/schedules
+
+###
+
+### Delete Schedule
+DELETE http://localhost:8080/schedule/1
